@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = input_direction *speed 
 	
 	
-		if position.x <50 and input_direction < 0 or position.x >1150 and input_direction >0:
+		if position.x <$CollisionShape2D.shape.size.x*2 and input_direction < 0 or position.x >get_window().size.x- $CollisionShape2D.shape.size.x and input_direction >0:
 			velocity.x  = 0
 
 	elif velocity.x !=0:

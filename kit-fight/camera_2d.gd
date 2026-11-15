@@ -7,6 +7,11 @@ var previousHeight= 0
 var maxHeight = -100
 
 func update_score():
+	
+	if position.y <=-4000+175:
+		maxHeight = -100
+		return 0
+		
 	var difference = position.y - maxHeight
 	if difference >= 0:
 		difference = 0
@@ -14,8 +19,7 @@ func update_score():
 		difference*=-1
 		maxHeight = position.y
 		
-	if position.y <=-4000+175:
-		maxHeight = -100
+
 	score+= difference/10
 func _init():
 	self.zoom = Vector2(1.1, 0.5)
