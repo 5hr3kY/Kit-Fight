@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://ck38efirutgg2" path="res://cat.gd" id="3_344ge"]
 [ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Cat-removebg-preview.png" id="4_6bp64"]
 [ext_resource type="Texture2D" uid="uid://c8w5ge5axrlv2" path="res://Assets/Ground.png" id="4_ynf5e"]
-[ext_resource type="Texture2D" uid="uid://dpkuqc6w6fh38" path="res://Assets/Water + Cloud.png" id="5_hptm8"]
+[ext_resource type="Texture2D" uid="uid://3lqljab4lq0n" path="res://Assets/Water + Cloud.png" id="5_hptm8"]
 [ext_resource type="Script" uid="uid://0lrwul71jhdw" path="res://tile_map.gd" id="6_d1ilt"]
+[ext_resource type="FontFile" uid="uid://b1sywxaa5e0gf" path="res://UI stuff/Matcha Style.ttf" id="8_344ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(58, 90.5)
@@ -92,10 +93,11 @@ script = ExtResource("1_21xkr")
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=449849195]
 unique_name_in_owner = true
 
-[node name="scoreName" type="Label" parent="Camera2D/CanvasLayer" unique_id=299867557]
+[node name="scoreName" type="RichTextLabel" parent="Camera2D/CanvasLayer" unique_id=1905760540]
 unique_name_in_owner = true
 offset_left = 1024.0
 offset_top = 34.0
 offset_right = 1144.0
 offset_bottom = 57.0
+theme_override_fonts/normal_font = ExtResource("8_344ge")
 text = "SCORE: "
