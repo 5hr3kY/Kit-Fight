@@ -73,6 +73,5 @@ position = Vector2(954, 472)
 texture = ExtResource("6_12m1t")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Play Button" to="PanelContainer/VBoxContainer/Play Button" method="_on_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/How to Play" to="PanelContainer/VBoxContainer/Play Button" method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/How to Play" to="PanelContainer/VBoxContainer/How to Play" method="_on_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Credits" to="PanelContainer/VBoxContainer/Credits" method="_on_pressed"]
