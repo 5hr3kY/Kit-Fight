@@ -6,10 +6,11 @@ extends CharacterBody2D
 var deceleration  = 1
 var gravity = 2
 var speed = 10
-var attacking  = false
+var surpassBoundary = false 
 var prev_is_on_floor = false
 var prev_velocity = 0
 var potential_velocity = 0
+
 
 func _sigma(delta):
 	if Input.is_action_just_pressed("ui_esc"):
@@ -27,7 +28,13 @@ func _charge(delta):
 
 func _check_location():
 	if position.y < -4000:
+		surpassBoundary = true  
+		print(position.y)
+		
+	if surpassBoundary and velocity.x ==0 and velocity.y ==0 and  is_on_floor():
 		position.y = 0
+		surpassBoundary= false
+		print(position)
 
 func _process(delta: float) -> void:
 	_charge(delta)
