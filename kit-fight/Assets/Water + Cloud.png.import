@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpb1jwj1s8ffh"
-path="res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"
+uid="uid://dpkuqc6w6fh38"
+path="res://.godot/imported/Water + Cloud.png-908f26c9319839898d16062773d68bcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"]
+source_file="res://Assets/Water + Cloud.png"
+dest_files=["res://.godot/imported/Water + Cloud.png-908f26c9319839898d16062773d68bcb.ctex"]
 
 [params]
 
