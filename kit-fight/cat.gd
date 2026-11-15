@@ -11,6 +11,9 @@ var prev_is_on_floor = false
 var prev_velocity = 0
 var potential_velocity = 0
 
+func exit():
+	if Input.is_action_pressed("key_exit"):
+		get_tree().change_scene_to_file( "res://Scenes/title_screen.tscn")
 
 func _charge(delta):		
 	if Input.is_action_pressed("ui_up") and is_on_floor():
