@@ -1,10 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://hi63ys7eodfn"]
+[gd_scene format=3 uid="uid://hi63ys7eodfn"]
 
-[ext_resource type="Texture2D" uid="uid://btjyjdkk848d2" path="res://temp.jpg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://d1kj8jejwnvsv" path="res://camera_2d.gd" id="1_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dvitlfu7a21rq" path="res://forest.jpg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ck38efirutgg2" path="res://cat.gd" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Cat-removebg-preview.png" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://oouqsc1m8eu3" path="res://fireball.gd" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dvtgocn38jlx1" path="res://OIP-1267249214-removebg-preview.png" id="5_7mycd"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(210, 63)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8spy"]
+radius = 15.033297
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Node2D" type="Node2D" unique_id=292624201]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=108713412]
+unique_name_in_owner = true
+position = Vector2(609, 331)
+script = ExtResource("1_7mycd")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=384507743]
+position = Vector2(-36, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=304056995]
+position = Vector2(641.00006, -663.00006)
+scale = Vector2(0.60910475, 2.41698)
 texture = ExtResource("1_ig7tw")
+
+[node name="Cat" type="CharacterBody2D" parent="." unique_id=507877446]
+unique_name_in_owner = true
+position = Vector2(94, 574)
+script = ExtResource("2_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cat" unique_id=1184588812]
+position = Vector2(43.999992, 19)
+scale = Vector2(0.6669285, 0.5)
+texture = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat" unique_id=964374476]
+position = Vector2(38, 14)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Fireball" type="CharacterBody2D" parent="." unique_id=1393381194]
+unique_name_in_owner = true
+visible = false
+position = Vector2(128, 357)
+script = ExtResource("4_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fireball" unique_id=871288530]
+visible = false
+position = Vector2(115, 231)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireball" unique_id=2086194315]
+visible = false
+position = Vector2(114, 230)
+shape = SubResource("CircleShape2D_g8spy")
+
+[node name="cloud" type="CharacterBody2D" parent="." unique_id=554804771]
+position = Vector2(699, 343)
+
+[node name="Sprite2D" type="Sprite2D" parent="cloud" unique_id=33452518]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cloud" unique_id=1802400274]
