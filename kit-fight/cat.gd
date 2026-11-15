@@ -17,14 +17,14 @@ func _charge(delta):
 		potential_velocity-= 100*delta
 		
 	elif Input.is_action_just_released("ui_up") and is_on_floor():
-		velocity.y = clamp(potential_velocity,-150,0) 
+		velocity.y = clamp(potential_velocity,-100,0) 
 		potential_velocity =0
 		
 
 
 func _check_location():
-	if position.y < -2000:
-		position.y = 100
+	if position.y < -4000:
+		position.y = 0
 
 func _process(delta: float) -> void:
 	_charge(delta)
