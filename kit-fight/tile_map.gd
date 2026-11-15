@@ -43,11 +43,11 @@ func generate_stuff():
 	
 	
 	for i in range(1,10,1):
-		var x = randi_range(0,14)
-		var y = randi_range(5*(i-9),5*(i-9)+5)
+		var x = randi_range(0,14) 
+		var y = randi_range(2*(i-11)-1,2*(i-11)+1)
 		
 		for deltax in range (1,5,1):
-			var coord = Vector2i((x+deltax),y*3)
+			var coord = Vector2i((x+deltax),y*5)
 		
 			self.set_cell(coord,5,Vector2i(1,0))
 			
@@ -66,7 +66,7 @@ func generate_stuff():
 	for _nothing in range(numClouds- placedClouds):
 	
 		var x = randi_range(0,14)
-		var y = randi_range(-40,5)
+		var y = randi_range(-21,1)
 		
 		if [x,y] in unusableValues : continue
 		
@@ -75,7 +75,7 @@ func generate_stuff():
 		unusableValues.append_array([x-1,y-1])
 
 		for i in range(1,6,1):
-			var coord = Vector2i((x+i),y*3)
+			var coord = Vector2i((x+i),y*5)
 			self.set_cell(coord,5,Vector2i(1,0))
 			
 			if y< -35:

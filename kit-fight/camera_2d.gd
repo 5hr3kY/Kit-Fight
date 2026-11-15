@@ -8,8 +8,8 @@ var maxHeight = -100
 
 func update_score():
 	
-	if position.y <=-4000+175:
-		maxHeight = -100
+	if %Cat.position.y <=-4000:
+		maxHeight = 100
 		return 0
 		
 	var difference = position.y - maxHeight
