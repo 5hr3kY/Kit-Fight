@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://yjyt4sykb64m" path="res://UI stuff/play_button.tscn" id="2_twnyg"]
 [ext_resource type="Script" uid="uid://bhoo5p0vnwcmi" path="res://UI stuff/play_button.gd" id="3_55kwv"]
 [ext_resource type="Script" uid="uid://csi0ypw4xt51" path="res://UI stuff/Credits.gd" id="4_twnyg"]
+[ext_resource type="Texture2D" uid="uid://cwalgd2piu32k" path="res://Assets/Denis Daily Cat.png" id="5_55kwv"]
+[ext_resource type="Texture2D" uid="uid://cy24out1va0bi" path="res://Assets/Title Cat.png" id="6_12m1t"]
 
 [node name="Title Screen" type="Control" unique_id=1649623233]
 layout_mode = 3
@@ -51,6 +53,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Credits"
 script = ExtResource("4_twnyg")
+
+[node name="DenisDailyCat" type="Sprite2D" parent="." unique_id=894211468]
+position = Vector2(132, 466)
+scale = Vector2(-0.9999988, 1)
+texture = ExtResource("5_55kwv")
+
+[node name="TitleCat" type="Sprite2D" parent="." unique_id=1841591163]
+position = Vector2(954, 472)
+texture = ExtResource("6_12m1t")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Play Button" to="PanelContainer/VBoxContainer/Play Button" method="_on_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Credits" to="PanelContainer/VBoxContainer/Credits" method="_on_pressed"]
