@@ -49,7 +49,7 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "How to Play Five Nights at Freddy's
+text = "How to Play Cat Game
 "
 fit_content = true
 autowrap_mode = 0
@@ -123,6 +123,25 @@ size_flags_vertical = 4
 theme = ExtResource("2_lonyb")
 text = "Back to Title"
 script = ExtResource("1_wpr6w")
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=1432865866]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -369.0
+offset_top = -99.0
+offset_right = 188.0
+offset_bottom = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_lonyb")
+theme_override_font_sizes/normal_font_size = 15
+text = "P.S. Press the escape key to go back 
+to the homepage while in the game."
+fit_content = true
+autowrap_mode = 0
 
 [node name="ArrowKeyRemovebgPreview" type="Sprite2D" parent="." unique_id=296156545]
 position = Vector2(578, 268)
