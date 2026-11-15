@@ -7,13 +7,13 @@ var previousHeight= 0
 var maxHeight = 0
 
 func update_score():
-	var difference = position.y -maxHeight 
-	if difference <= 0 :
+	var difference = position.y - maxHeight
+	if difference >= 0 :
 		difference = 0
-		
-	if position.y > maxHeight:
+	else:
+		difference*=-1
 		maxHeight = position.y
-	
+		
 	score+= difference
 	
 	
@@ -22,7 +22,8 @@ func _init():
 	self.zoom = Vector2(1.1, 0.5)
 
 func _process(delta: float)-> void:
-	display_score()
+	if %scoreName:
+		display_score()
 	update_score()
 
 func _physics_process(delta:float)-> void:
@@ -30,4 +31,4 @@ func _physics_process(delta:float)-> void:
 	
 	
 func display_score():
-	%CanvasLayer/scoreName.text = "Score: " + str(score )
+	%scoreName.text = "Score: " + str(score )

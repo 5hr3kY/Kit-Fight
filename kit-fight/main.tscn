@@ -1,9 +1,9 @@
-[gd_scene format=4 uid="uid://ds84bvmdc5kg7"]
+[gd_scene format=4 uid="uid://hi63ys7eodfn"]
 
 [ext_resource type="Script" uid="uid://d1kj8jejwnvsv" path="res://camera_2d.gd" id="1_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://dvitlfu7a21rq" path="res://Assets/forest.jpg" id="2_hptm8"]
 [ext_resource type="Script" uid="uid://ck38efirutgg2" path="res://cat.gd" id="3_d1ilt"]
-[ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Assets/Cat-removebg-preview.png" id="4_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Cat-removebg-preview.png" id="4_ynf5e"]
 [ext_resource type="Script" uid="uid://oouqsc1m8eu3" path="res://fireball.gd" id="5_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://dvtgocn38jlx1" path="res://OIP-1267249214-removebg-preview.png" id="6_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://bbaa5r1y7ajo7" path="res://Assets/Spikes and sky stuff.png" id="7_wsu2k"]
