@@ -1,0 +1,26 @@
+[gd_resource type="Theme" format=3 uid="uid://cgtnpiy2qa11x"]
+
+[ext_resource type="FontFile" uid="uid://b1sywxaa5e0gf" path="res://UI stuff/Matcha Style.ttf" id="1_evr86"]
+[ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Assets/Cat-removebg-preview.png" id="1_wrrfv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rse8t"]
+texture = ExtResource("1_wrrfv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs5bk"]
+bg_color = Color(0.5372549, 0.7647059, 0.92156863, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_evr86")
+default_font_size = 32
+Button/font_sizes/font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_rse8t")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_qs5bk")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabelTitle/base_type = &"RichTextLabel"
+RichTextLabelTitle/font_sizes/normal_font_size = 128
+VBoxContainer/constants/separation = 16

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://yjyt4sykb64m"]
+
+[node name="Play Button" type="Button" unique_id=1733940814]
+text = "Play"
