@@ -46,6 +46,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("3_55kwv")
 
+[node name="How to Play" parent="PanelContainer/VBoxContainer" unique_id=1098091192 instance=ExtResource("2_twnyg")]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "How to Play"
+script = ExtResource("4_twnyg")
+
 [node name="Credits" parent="PanelContainer/VBoxContainer" unique_id=886890336 instance=ExtResource("2_twnyg")]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
@@ -64,4 +72,5 @@ position = Vector2(954, 472)
 texture = ExtResource("6_12m1t")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Play Button" to="PanelContainer/VBoxContainer/Play Button" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/How to Play" to="PanelContainer/VBoxContainer/How to Play" method="_on_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Credits" to="PanelContainer/VBoxContainer/Credits" method="_on_pressed"]
