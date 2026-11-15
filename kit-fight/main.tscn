@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://hi63ys7eodfn"]
 
+[ext_resource type="Script" uid="uid://d1kj8jejwnvsv" path="res://camera_2d.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dvitlfu7a21rq" path="res://forest.jpg" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://ck38efirutgg2" path="res://cat.gd" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Cat-removebg-preview.png" id="3_1bvp3"]
@@ -14,14 +15,21 @@ radius = 15.033297
 
 [node name="Node2D" type="Node2D" unique_id=292624201]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=108713412]
+unique_name_in_owner = true
+position = Vector2(609, 331)
+script = ExtResource("1_7mycd")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=384507743]
+position = Vector2(-36, 12)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=304056995]
-position = Vector2(2325, 1316)
-scale = Vector2(2.4135022, 2.4172933)
+position = Vector2(641.00006, -663.00006)
+scale = Vector2(0.60910475, 2.41698)
 texture = ExtResource("1_ig7tw")
 
 [node name="Cat" type="CharacterBody2D" parent="." unique_id=507877446]
+unique_name_in_owner = true
 position = Vector2(94, 574)
 script = ExtResource("2_h2yge")
 
@@ -51,8 +59,9 @@ visible = false
 position = Vector2(114, 230)
 shape = SubResource("CircleShape2D_g8spy")
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=554804771]
+[node name="cloud" type="CharacterBody2D" parent="." unique_id=554804771]
+position = Vector2(699, 343)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=33452518]
+[node name="Sprite2D" type="Sprite2D" parent="cloud" unique_id=33452518]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=1802400274]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cloud" unique_id=1802400274]
