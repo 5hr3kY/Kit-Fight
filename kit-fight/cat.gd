@@ -1,22 +1,51 @@
+#assumes that it will loop from 100 -4000
+
 extends CharacterBody2D
 
-var jumped = false
+
+var deceleration  = 1
 var gravity = 2
-var onFloor = false 
 var speed = 10
 var attacking  = false
 var prev_is_on_floor = false
 var prev_velocity = 0
+var potential_velocity = 0
+
+
+func _charge(delta):		
+	if Input.is_action_pressed("ui_up") and is_on_floor():
+		potential_velocity-= 100*delta
+		
+	elif Input.is_action_just_released("ui_up") and is_on_floor():
+		velocity.y = clamp(potential_velocity,-150,0) 
+		potential_velocity =0
+		
+
+
+func _check_location():
+	if position.y < -2000:
+		position.y = 100
+
+func _process(delta: float) -> void:
+	_charge(delta)
+	_check_location()
 
 func _physics_process(delta: float) -> void:
-	var input_direction = Input.get_axis("ui_left","ui_right")
+
+	if not is_on_floor():
+		var input_direction = Input.get_axis("ui_left","ui_right")
+		velocity.x = input_direction *speed 
 	
-	velocity.x = input_direction *speed
-	if position.x <150 and input_direction < 0 or position.x >1100 and input_direction >0:
-		velocity.x  = 0
 	
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
-		velocity.y = -80
+		if position.x <50 and input_direction < 0 or position.x >1150 and input_direction >0:
+			velocity.x  = 0
+
+	elif velocity.x !=0:
+		if velocity.x >0:
+			velocity.x -= deceleration
+		elif velocity.x< 0:
+			velocity.x+= deceleration
+		
 	
 	if not is_on_floor():
 		velocity.y += gravity
