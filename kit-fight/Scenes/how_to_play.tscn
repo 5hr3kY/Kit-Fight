@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cqbxwykuoajl2"]
+
+[ext_resource type="FontFile" uid="uid://b1sywxaa5e0gf" path="res://UI stuff/Matcha Style.ttf" id="1_dlnx3"]
+[ext_resource type="Texture2D" uid="uid://7ci7ldikaw00" path="res://Assets/arrow_key-removebg-preview.png" id="1_hl01w"]
+[ext_resource type="Script" uid="uid://bi5k2e82bsb33" path="res://Scenes/button.gd" id="1_wpr6w"]
+[ext_resource type="Theme" uid="uid://cgtnpiy2qa11x" path="res://UI stuff/theme.tres" id="2_lonyb"]
+
+[sub_resource type="Theme" id="Theme_dlnx3"]
+default_font = ExtResource("1_dlnx3")
+RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/fonts/normal_font = ExtResource("1_dlnx3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrrfv"]
+bg_color = Color(0.5372549, 0.7647059, 0.92156863, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+
+[node name="How to Play" type="Control" unique_id=1419805591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1415347926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dlnx3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_wrrfv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=531597862]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1576709757]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "How to Play Five Nights at Freddy's
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer" unique_id=1292855974]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_lonyb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PanelContainer/VBoxContainer2" unique_id=1464706528]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=641313929]
+offset_left = 274.0
+offset_top = 79.0
+offset_right = 902.0
+offset_bottom = 108.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_lonyb")
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+text = "You can only move while in the air or bouncing. "
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=99622709]
+offset_left = 191.0
+offset_top = 151.0
+offset_right = 962.0
+offset_bottom = 191.0
+theme = ExtResource("2_lonyb")
+text = "Use the up arrow to jump. Hold it down to charge your jump."
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=222849953]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -287.0
+offset_right = 173.0
+offset_bottom = -247.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_lonyb")
+text = "Use the left and right arrow keys to move."
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=1495731003]
+offset_left = 296.0
+offset_top = 455.0
+offset_right = 870.0
+offset_bottom = 495.0
+theme = ExtResource("2_lonyb")
+text = "Go higher to get a bigger score and have fun!"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=1276738157]
+custom_minimum_size = Vector2(300, 100)
+offset_left = 430.0
+offset_top = 517.0
+offset_right = 730.0
+offset_bottom = 617.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_lonyb")
+text = "Back to Title"
+script = ExtResource("1_wpr6w")
+
+[node name="ArrowKeyRemovebgPreview" type="Sprite2D" parent="." unique_id=296156545]
+position = Vector2(578, 268)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_hl01w")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer2/CanvasLayer/Button" to="PanelContainer/VBoxContainer2/CanvasLayer/Button" method="_on_pressed"]

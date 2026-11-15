@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c8w5ge5axrlv2" path="res://Assets/Ground.png" id="4_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://3lqljab4lq0n" path="res://Assets/Water + Cloud.png" id="5_hptm8"]
 [ext_resource type="Script" uid="uid://0lrwul71jhdw" path="res://tile_map.gd" id="6_d1ilt"]
+[ext_resource type="FontFile" uid="uid://b1sywxaa5e0gf" path="res://UI stuff/Matcha Style.ttf" id="8_344ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(58, 90.5)
@@ -98,4 +99,5 @@ offset_left = 977.0
 offset_top = 31.0
 offset_right = 1097.0
 offset_bottom = 54.0
+theme_override_fonts/normal_font = ExtResource("8_344ge")
 text = "SCORE: "
