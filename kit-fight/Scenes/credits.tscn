@@ -1,9 +1,42 @@
 [gd_scene format=3 uid="uid://3psbcfxmendn"]
 
+[ext_resource type="Script" uid="uid://bi5k2e82bsb33" path="res://Scenes/button.gd" id="1_r18jl"]
+
 [node name="Credits" type="Control" unique_id=1098141035]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.401
+anchor_bottom = 0.35700002
+offset_left = -430.0
+offset_top = -213.0
+offset_right = -891.952
+offset_bottom = 203.66399
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(575, 291)
+
+[node name="Label" type="Label" parent="." unique_id=437009308]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.94000006
+anchor_bottom = 0.20700002
+offset_left = 611.0
+offset_top = 324.0
+offset_right = 294.11987
+offset_bottom = 530.864
+theme_override_font_sizes/font_size = 60
+text = "this game was created by: 
+Charles
+Carlos
+and Tanner"
+
+[node name="Button" type="Button" parent="Label" unique_id=420178939]
+layout_mode = 0
+offset_left = -177.0
+offset_top = -109.0
+offset_right = 102.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 22
+text = "<- go back to main screen"
+script = ExtResource("1_r18jl")
+
+[connection signal="pressed" from="Label/Button" to="Label/Button" method="_on_pressed"]
