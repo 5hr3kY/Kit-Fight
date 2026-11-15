@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://cgtnpiy2qa11x"]
 
 [ext_resource type="FontFile" uid="uid://b1sywxaa5e0gf" path="res://UI stuff/Matcha Style.ttf" id="1_evr86"]
-[ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Assets/Cat-removebg-preview.png" id="1_wrrfv"]
+[ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Cat-removebg-preview.png" id="1_wrrfv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rse8t"]
 texture = ExtResource("1_wrrfv")
