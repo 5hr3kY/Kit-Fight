@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cpgfa6h2kck7h"]
+
+[ext_resource type="Theme" uid="uid://cgtnpiy2qa11x" path="res://UI stuff/theme.tres" id="1_4gxqj"]
+[ext_resource type="PackedScene" uid="uid://yjyt4sykb64m" path="res://UI stuff/play_button.tscn" id="2_twnyg"]
+[ext_resource type="Script" uid="uid://bhoo5p0vnwcmi" path="res://UI stuff/play_button.gd" id="3_55kwv"]
+[ext_resource type="Script" uid="uid://csi0ypw4xt51" path="res://UI stuff/Credits.gd" id="4_twnyg"]
+
+[node name="Title Screen" type="Control" unique_id=1649623233]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=428410708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4gxqj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1132121875]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=465455864]
+layout_mode = 2
+theme_type_variation = &"RichTextLabelTitle"
+bbcode_enabled = true
+text = "[wave]CAT GAME"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Play Button" parent="PanelContainer/VBoxContainer" unique_id=1733940814 instance=ExtResource("2_twnyg")]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_55kwv")
+
+[node name="Credits" parent="PanelContainer/VBoxContainer" unique_id=886890336 instance=ExtResource("2_twnyg")]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Credits"
+script = ExtResource("4_twnyg")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Play Button" to="PanelContainer/VBoxContainer/Play Button" method="_on_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Credits" to="PanelContainer/VBoxContainer/Credits" method="_on_pressed"]

@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="KitFight"
-run/main_scene="uid://hi63ys7eodfn"
+run/main_scene="uid://cpgfa6h2kck7h"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
