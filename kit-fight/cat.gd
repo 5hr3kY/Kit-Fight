@@ -11,8 +11,8 @@ var prev_is_on_floor = false
 var prev_velocity = 0
 var potential_velocity = 0
 
-func exit():
-	if Input.is_action_pressed("key_exit"):
+func _sigma(delta):
+	if Input.is_action_just_pressed("ui_esc"):
 		get_tree().change_scene_to_file( "res://Scenes/title_screen.tscn")
 
 func _charge(delta):		
@@ -32,6 +32,8 @@ func _check_location():
 func _process(delta: float) -> void:
 	_charge(delta)
 	_check_location()
+	_sigma(delta)
+	
 
 func _physics_process(delta: float) -> void:
 
