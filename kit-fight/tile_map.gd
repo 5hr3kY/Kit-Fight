@@ -14,7 +14,7 @@ func check_location():
 		
 func _process(delta):
 	check_location();
-	if reachedTop:
+	if reachedTop and %Cat.is_on_floor():
 		delete_all()
 		generate_stuff()
 		reachedTop = false
@@ -25,7 +25,7 @@ func _process(delta):
 	
 	
 func delete_all():
-	for y in range (-50,20,1):
+	for y in range (-90,0,1):
 		for x in range (0,20,1):
 			var coord= Vector2i(x,y)
 			set_cell(coord, -1)
@@ -33,8 +33,7 @@ func delete_all():
 func generate_stuff():
 	var placedClouds =0
 	for coordinates in topClouds:
-		#for x in range(1,6,1):	
-		#print(coordinates)
+
 		self.set_cell(coordinates,5,Vector2i(1,0))
 	placedClouds+= topClouds.size()/5
 
@@ -44,7 +43,7 @@ func generate_stuff():
 	
 	for i in range(1,10,1):
 		var x = randi_range(0,14) 
-		var y = randi_range(2*(i-11)-1,2*(i-11)+1)
+		var y = randi_range(2*(i-11)-1,2*(i-11)+4)
 		
 		for deltax in range (1,5,1):
 			var coord = Vector2i((x+deltax),y*5)
@@ -66,7 +65,7 @@ func generate_stuff():
 	for _nothing in range(numClouds- placedClouds):
 	
 		var x = randi_range(0,14)
-		var y = randi_range(-21,1)
+		var y = randi_range(-21,3)
 		
 		if [x,y] in unusableValues : continue
 		
