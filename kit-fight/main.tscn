@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ccqtcxtgyhpw6" path="res://Cat-removebg-preview.png" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://oouqsc1m8eu3" path="res://fireball.gd" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dvtgocn38jlx1" path="res://OIP-1267249214-removebg-preview.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dt77b1wdnt4jg" path="res://cloud-removebg-preview.png" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(210, 63)
@@ -63,5 +64,6 @@ shape = SubResource("CircleShape2D_g8spy")
 position = Vector2(699, 343)
 
 [node name="Sprite2D" type="Sprite2D" parent="cloud" unique_id=33452518]
+texture = ExtResource("7_272bh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cloud" unique_id=1802400274]
