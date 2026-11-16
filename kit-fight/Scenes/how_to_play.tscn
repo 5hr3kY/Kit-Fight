@@ -3,7 +3,9 @@
 [ext_resource type="FontFile" uid="uid://b1sywxaa5e0gf" path="res://UI stuff/Matcha Style.ttf" id="1_dlnx3"]
 [ext_resource type="Texture2D" uid="uid://7ci7ldikaw00" path="res://Assets/arrow_key-removebg-preview.png" id="1_hl01w"]
 [ext_resource type="Script" uid="uid://bi5k2e82bsb33" path="res://Scenes/button.gd" id="1_wpr6w"]
+[ext_resource type="Texture2D" uid="uid://c61cimv8irmbt" path="res://Assets/cat_screenie-removebg-preview.png" id="2_7d32w"]
 [ext_resource type="Theme" uid="uid://cgtnpiy2qa11x" path="res://UI stuff/theme.tres" id="2_lonyb"]
+[ext_resource type="Texture2D" uid="uid://dd53aemj8x5de" path="res://Assets/War-Cat.jpg" id="5_i0xi1"]
 
 [sub_resource type="Theme" id="Theme_dlnx3"]
 default_font = ExtResource("1_dlnx3")
@@ -49,10 +51,16 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "How to Play Cat Game
+bbcode_enabled = true
+text = "[wave] How to Play Cat Game
 "
 fit_content = true
 autowrap_mode = 0
+
+[node name="CatScreenieRemovebgPreview" type="Sprite2D" parent="PanelContainer/VBoxContainer" unique_id=888361486]
+position = Vector2(-295, 487)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_7d32w")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer" unique_id=1292855974]
 layout_mode = 2
@@ -130,18 +138,27 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -369.0
-offset_top = -99.0
-offset_right = 188.0
-offset_bottom = -41.0
+offset_left = -1127.0
+offset_top = -272.0
+offset_right = -570.0
+offset_bottom = -214.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_lonyb")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 15
-text = "P.S. Press the escape key to go back 
-to the homepage while in the game."
+bbcode_enabled = true
+text = "[shake] I shouldnt say this but... 
+Press the [color=red]escape key [/color] to go 
+back to the homepage while in
+the game. [/shake]"
 fit_content = true
 autowrap_mode = 0
+
+[node name="WarCat" type="Sprite2D" parent="PanelContainer/VBoxContainer2/CanvasLayer" unique_id=1351152745]
+position = Vector2(1014.9999, 307)
+scale = Vector2(0.9257028, 0.924)
+texture = ExtResource("5_i0xi1")
 
 [node name="ArrowKeyRemovebgPreview" type="Sprite2D" parent="." unique_id=296156545]
 position = Vector2(578, 268)

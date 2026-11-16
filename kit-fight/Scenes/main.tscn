@@ -100,4 +100,5 @@ offset_top = 31.0
 offset_right = 1097.0
 offset_bottom = 54.0
 theme_override_fonts/normal_font = ExtResource("8_344ge")
+bbcode_enabled = true
 text = "SCORE: "

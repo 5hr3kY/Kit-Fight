@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://3psbcfxmendn"]
 
+[ext_resource type="Theme" uid="uid://cgtnpiy2qa11x" path="res://UI stuff/theme.tres" id="1_gryuy"]
 [ext_resource type="Script" uid="uid://bi5k2e82bsb33" path="res://Scenes/button.gd" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://yx1qrnicvurd" path="res://Assets/cat in russia.jpg" id="3_ccovl"]
+[ext_resource type="Texture2D" uid="uid://b6g26j2prf6bp" path="res://Assets/suprised cat.jpg" id="4_1bamb"]
 
 [node name="Credits" type="Control" unique_id=1098141035]
 layout_mode = 3
@@ -14,29 +17,52 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(575, 291)
 
-[node name="Label" type="Label" parent="." unique_id=437009308]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1969357955]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.94000006
-anchor_bottom = 0.20700002
-offset_left = 611.0
-offset_top = 324.0
-offset_right = 294.11987
-offset_bottom = 530.864
-theme_override_font_sizes/font_size = 60
-text = "this game was created by: 
+anchor_left = 0.377
+anchor_top = 0.32700002
+anchor_right = 1.3770001
+anchor_bottom = 1.327
+offset_left = -0.3040161
+offset_top = 0.10398865
+offset_right = -0.30407715
+offset_bottom = 0.104003906
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gryuy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=532687788]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=80991148]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "This game was created by: 
 Charles
 Carlos
 and Tanner"
+fit_content = true
+autowrap_mode = 0
 
-[node name="Button" type="Button" parent="Label" unique_id=420178939]
-layout_mode = 0
-offset_left = -177.0
-offset_top = -109.0
-offset_right = 102.0
-offset_bottom = 8.0
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=420178939]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme = ExtResource("1_gryuy")
 theme_override_font_sizes/font_size = 22
-text = "<- go back to main screen"
+text = "Back to Title"
 script = ExtResource("1_r18jl")
 
-[connection signal="pressed" from="Label/Button" to="Label/Button" method="_on_pressed"]
+[node name="CatInRussia" type="Sprite2D" parent="PanelContainer/VBoxContainer" unique_id=587823825]
+position = Vector2(-152, 325)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ccovl")
+
+[node name="SuprisedCat" type="Sprite2D" parent="PanelContainer/VBoxContainer" unique_id=527449478]
+position = Vector2(694, -33.999996)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_1bamb")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="PanelContainer/VBoxContainer/Button" method="_on_pressed"]
